@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Ariane Cake's</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">Ariane Cake's</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">Sobre Nós</a></li>
+                    <li><a href="stores.html">Localização</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://wa.me/5592991146084?text=Ol%C3%A1,%20tenho%20uma%20d%C3%BAvida!" class="btn btn-primary" target="_blank" style="text-decoration: none;">
+  Pedido
+</a>
+                <!-- <a href="stores.html" class="icon-link">
+                    <img src="https://placehold.co/24x24/000000/FFFFFF?text=L" alt="Location Icon">
+                </a>
+                <a href="#" class="icon-link">
+                    <img src="https://placehold.co/24x24/000000/FFFFFF?text=U" alt="User Icon">
+                </a> -->
+            </div>
+            <button class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-page">
+            <div class="about-header">
+                <h1>Historia</h1>
+            </div>
+
+            <div class="about-story-section">
+                <div class="about-image">
+                    <img src="/Perfil.jpeg" alt="Photo">
+                </div>
+                <div class="about-text">
+                    <h2>Ariane Cakes a Dream a Love</h2>
+                    <p>Desde cedo, a confeitaria já fazia parte da minha vida. Tudo começou na infância, quando ajudávamos no restaurante da nossa mãe preparando doces que encantavam os clientes. Pudins cremosos e cupcakes fofinhos saíam das nossas mãos ainda pequenas, mas já carregados de carinho e dedicação.
+</p>
+                    <p>Com o tempo, a vida nos levou por outros caminhos, mas aquela lembrança doce nunca saiu do meu coração. Ao me tornar adulta, redescobri na confeitaria não apenas uma paixão e amor, mas também um propósito: criar momentos especiais através de sabores que resgatam memórias e despertam sorrisos.
+</p>
+                    <p>Hoje, já são quatro anos de dedicação total à confeitaria. Cada receita é feita com cuidado artesanal, como nos velhos tempos, mas com um toque moderno que encanta todos que provam. Nossa missão é simples: adoçar sua vida com muito amor em cada detalhe.</p>
+                </div>
+            </div>
+
+            <div class="about-values-section">
+                <h2>Valores</h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <h3>Qualidade</h3>
+                        <p>Nosso compromisso é superar expectativas. Da escolha dos ingredientes à apresentação final, tudo é feito com cuidado para garantir sabor, beleza e excelência.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Detalhes</h3>
+                        <p>Mais do que doces, entregamos carinho. Cada receita é preparada com amor, pensando em transformar momentos simples em lembranças especiais.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Conexão</h3>
+                        <p>Acreditamos que a confeitaria tem o poder de reunir famílias, aproximar amigos e trazer leveza ao dia a dia. Servimos não apenas sobremesas, mas experiências que aquecem o coração.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Cardápio</h4>
+                    <ul>
+                        <li><a href="menu.html">Nosso Cardápio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Mais</h4>
+                    <ul>
+                        <li><a href="stores.html">Localização</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Nos siga</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="https://placehold.co/32x32/000000/FFFFFF?text=FB" alt="Facebook"></a>
+                    <a href="#"><img src="https://placehold.co/32x32/000000/FFFFFF?text=IG" alt="Instagram"></a>
+                    <a href="#"><img src="https://placehold.co/32x32/000000/FFFFFF?text=TW" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ariane Cake's. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+<style>
+
+
+
+
+.slide {
+    opacity: 0;
+    transform: translateY(30px) scale(0.90);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+.slide.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+.slide.active:hover {
+    transform: translateY(-2px) scale(1.02);
+}
+</style>
+
+<script>
+document.querySelectorAll('.value-item, img').forEach(el => {
+    el.classList.add('slide');
+});
+
+function showElements() {
+    document.querySelectorAll('.slide').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+            el.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('load', showElements);
+window.addEventListener('scroll', showElements);
+</script>
+
+
+
+
+</body>
+</body>
+</html>
+
+
+
+

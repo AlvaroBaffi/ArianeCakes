@@ -1,0 +1,857 @@
+/* General Body about-imageStyles */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-color: #fbf8f9;
+    color: #000000;
+}
+
+/* Header */
+.main-header {
+    background-color: #FFB9CD;
+    border-bottom: 10px solid #FFB9CD;
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #d6244b; /* Crumbl Pink */
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-link img {
+    display: block;
+}
+
+.hamburger-menu {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #e83e8c; /* Crumbl Pink */
+    color: #9bfab0;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #333;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-video-wrapper {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.hero-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin: 0 0 10px;
+    font-weight: 900;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+}
+
+/* Weekly Cookies Section */
+.weekly-cookies {
+    padding: 100px 5%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.weekly-cookies h2 {
+    font-size: 3rem;
+    margin-bottom: 150px;
+    text-align: center;  
+}
+
+.cookies-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.cookie-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0;
+}
+
+/* cookies5 - imagem esquerda, texto direita */
+.cookies5 {
+    flex-direction: row;
+    background-color: #f7070700;
+    border-radius: 30px;
+    height: 300px;
+    max-height: 400px; /* A altura será ajustada para 150px, mesmo que o valor de height seja maior */
+    transition: background-color 0.3s ease;
+    margin-bottom: 100px;
+   
+}
+
+.cookies5 .cookie-image {
+    flex: 1;
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 20px;
+    margin: 50px;
+    height: -150px;
+}
+
+.cookies5 .cookie-text {
+    flex: 1;
+    text-align: left;
+    padding-left: 40px;  
+}
+
+/* Quando passar o mouse */
+.cookies5:hover {
+    background-color: #FFB9CD;
+}
+
+/* cookies6 - imagem direita, texto esquerda */
+.cookies6 {
+    flex-direction: row-reverse;
+    background-color: #b51a1a00;
+    border-radius: 30px;
+    height: 300px;
+    max-height: 400px; /* A altura será ajustada para 150px, mesmo que o valor de height seja maior */
+    transition: background-color 0.3s ease;
+    margin-bottom: 100px;
+   
+}
+
+.cookies6 .cookie-image {
+    flex: 1;
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 20px;
+    margin: 50px;
+    height: -150px;
+}
+
+.cookies6 .cookie-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 40px;
+}
+
+/* Quando passar o mouse */
+.cookies6:hover {
+    background-color: #FFB9CD;}
+
+/* cookies7 - imagem esquerda, texto direita */
+.cookies7 {
+    flex-direction: row;
+    background-color: #ff020200;
+    border-radius: 30px;
+    height: 300px;
+    max-height: 400px; /* A altura será ajustada para 150px, mesmo que o valor de height seja maior */
+    transition: background-color 0.3s ease;
+    margin-bottom: 100px;
+}
+
+.cookies7 .cookie-image {
+    flex: 1;
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 20px;
+    margin: 50px;
+    height: -150px;
+}
+
+.cookies7 .cookie-text {
+    flex: 1;
+    text-align: left;
+    padding-left: 40px;
+}
+
+/* Quando passar o mouse */
+.cookies7:hover {
+    background-color: #FFB9CD;}
+
+/* cookies8 - imagem direita, texto esquerda */
+.cookies8 {
+    flex-direction: row-reverse;
+    background-color: #f7050500;
+    border-radius: 30px;
+    height: 300px;
+    max-height: 400px; /* A altura será ajustada para 150px, mesmo que o valor de height seja maior */
+    transition: background-color 0.3s ease;
+    margin-bottom: 150px;
+}
+
+.cookies8 .cookie-image {
+    flex: 1;
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 20px;
+    margin: 50px;
+    height: -150px;
+}
+
+.cookies8 .cookie-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 40px;
+}
+
+/* Quando passar o mouse */
+.cookies8:hover {
+    background-color: #FFB9CD;}
+
+/* Estilos das imagens */
+.cookie-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+   
+}
+
+/* Estilos do texto */
+.cookie-text h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.cookie-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* cookies9 - imagem esquerda, texto direita */
+.cookies9 {
+    flex-direction: row;
+    background-color: #ffb9cd00;
+    border-radius: 30px;
+    height: 300px;
+    max-height: 400px; /* A altura será ajustada para 150px, mesmo que o valor de height seja maior */
+    transition: background-color 0.3s ease;
+    margin-bottom: 100px;
+    
+}
+
+.cookies9 .cookie-image {
+    flex: 1;
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 20px;
+    margin: 50px;
+    height: -150px;
+}
+
+.cookies9 .cookie-text {
+    flex: 1;
+    text-align: left;
+    padding-left: 40px;
+}
+
+/* Quando passar o mouse */
+.cookies9:hover {
+    background-color: #FFB9CD;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Botão com borda transparente */
+.btn-pedido {
+  padding: 12px 24px;
+  background: transparent;
+  border: 2px solid transparent; /* borda transparente */
+  color: #000000;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  border-width: 3px;
+  width: 120px;
+  font-weight: bold;  
+}
+/* Quando passar o mouse na box, a borda do botão fica preta */
+.cookies5:hover .btn-pedido {
+  border-color: #000000;
+}
+/* Quando passar o mouse na box, a borda do botão fica preta */
+.cookies6:hover .btn-pedido {
+  border-color: #000000;
+}
+/* Quando passar o mouse na box, a borda do botão fica preta */
+.cookies7:hover .btn-pedido {
+  border-color: #000000;
+}
+/* Quando passar o mouse na box, a borda do botão fica preta */
+.cookies8:hover .btn-pedido {
+  border-color: #000000;
+}
+/* Quando passar o mouse na box, a borda do botão fica preta */
+.cookies9:hover .btn-pedido {
+  border-color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .cookie-item,
+    .cookies5,
+    .cookies6,
+    .cookies7,
+    .cookies8 {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    
+    .cookie-text {
+        padding: 20px 0 0 0 !important;
+    }
+    
+    .weekly-cookies h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Info Section */
+.info-section {
+    padding: 60px 5%;
+    background-color: #fff;
+}
+
+.info-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.info-image {
+    flex: 1;
+}
+
+.info-image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-text h2 {
+    font-size: 2.5rem;
+}
+
+.info-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #FFB9CD;
+    padding: 50px 5%;
+    color: #d6244b;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    color: #9bfab0;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li a {
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: #d6244b;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #FFB9CD;
+    padding-top: 20px;
+}
+
+/* Store Finder Page */
+.store-finder {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.store-finder-content h1 {
+    font-size: 2.8rem;
+}
+
+.search-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-form input {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+.map-placeholder {
+    margin-top: 50px;
+}
+
+.map-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 15px;
+}
+
+/****** Menu Page *****/
+
+.menu-page {
+    padding: 60px 5%;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-header h1 {
+    font-size: 2.8rem;
+}
+
+.cookie-item-detailed {
+    text-align: center;
+}
+
+.cookie-item-detailed img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.cookie-item-detailed h3 {
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+}
+
+.cookie-description {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 15px;
+}
+
+/* About Us Page */
+.about-page {
+    padding: 60px 5%;
+    
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+    
+}
+
+.about-header h1 {
+    font-size: 2.8rem;
+}
+
+.about-story-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 60px;
+   
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+    
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    color: #FFB9CD;
+    
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.about-values-section {
+    text-align: center;
+}
+
+.about-values-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.value-item {
+    background-color: #FFB9CD;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+
+}
+
+.value-item h3 {
+    font-size: 1.5rem;
+    color: #9bfab0;
+}
+
+
+/* Galeria de fotos */
+.gallery-section {
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    background-size: cover;
+
+    
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 200px 250px;
+    gap: 0;
+    width: 100%;
+    height: 750px;
+    
+    
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    z-index: 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Layout específico para cada item */
+.item-1 {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+.item-2 {
+    grid-column: 2;
+    grid-row: 1 / 5; /* Ocupa 2 linhas */
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+.item-3 {
+    grid-column: 3 / 5; /* Ocupa 2 colunas */
+    grid-row: 1;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+.item-4 {
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 20px;
+    margin: 10px;
+    height: 430px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+.item-5 {
+    grid-column: 3;
+    grid-row: 2 / 4; /* Ocupa 2 linhas */
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+.item-6 {
+    grid-column: 4;
+    grid-row: 2 / 4; /* Ocupa 2 linhas */
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 200px);
+        height: auto;
+    }
+    
+    .item-1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .item-2 {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+    
+    .item-3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .item-4 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .item-5 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    
+    .item-6 {
+        grid-column: 1 / 3;
+        grid-row: 4;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 250px);
+    }
+    
+    .gallery-item {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav, .header-actions .btn, .header-actions .icon-link {
+        display: none; /* Hide on mobile */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show on mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .info-content, .about-story-section {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-form input {
+        width: 80%;
+    }
+}
