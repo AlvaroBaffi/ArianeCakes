@@ -1,0 +1,555 @@
+/* General Body Styles */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-color: #fcfcfc;
+    color: #333;
+}
+
+/* Header */
+.main-header {
+    width: 100%;
+    background-color: #ffe9f5f3;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #e83e8c; /* Crumbl Pink */
+    text-decoration: none;
+}
+
+.instagram-link i {
+    font-size: 28px;
+    color: #E4405F; /* cor oficial do Instagram */
+    transition: transform 0.2s;
+}
+
+.instagram-link i:hover {
+    transform: scale(1.2);
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-link i {
+    font-size: 28px;
+    color: #25D366;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-link i:hover {
+    transform: scale(1.2);
+}
+
+.icon-ifood {
+    width: 32px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.icon-ifood:hover {
+    transform: scale(1.2);
+}
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-link img {
+    display: block;
+}
+
+.hamburger-menu {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #e83e8c; /* Crumbl Pink */
+    color: #fff;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #333;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-video-wrapper {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #0000007a 0px 1px 15px;
+}
+
+.hero-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-header {
+    height: 45px;
+    width: auto;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin: 0 0 10px;
+    font-weight: 900;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+}
+
+/* Weekly Cookies Section */
+.weekly-cookies {
+    width: 80%;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin: 0 auto 0rem ;
+}
+
+.weekly-cookies h2 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.cookies-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.div-position{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.div-position2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cookie-item {
+    width: 75%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    background-color: #d4d4d4;
+    padding: 1.5rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 5rem;
+}
+
+.cookie-item img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.cookie-item:hover {
+    background-color: #e26da4;
+    color: #fff;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease
+}
+
+.content-text {
+    margin-left: 20px;
+    text-align: left;
+    padding: 20px;
+}
+
+.content-text h3 {
+    font-size: 1.5rem;
+}
+
+.content-text h4 {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+    .mais-vendidos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .mais-vendidos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Info Section */
+.info-section {
+    padding: 60px 5%;
+    background-color: #fdc0dd;
+}
+
+.info-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.info-image {
+    flex: 1;
+}
+
+.info-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    padding-left: 120px;
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-text h2 {
+    font-size: 2.5rem;
+}
+
+.info-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #ffe9f5f3;
+    padding: 50px 5%;
+    color: #555;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li a {
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: #555;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+}
+
+
+.social-icons i:hover {
+    transform: scale(1);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+/* Store Finder Page */
+.store-finder {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.store-finder-content h1 {
+    font-size: 2.8rem;
+}
+
+.search-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-form input {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+.map-placeholder {
+    margin-top: 50px;
+}
+
+.map-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 15px;
+}
+
+/* Menu Page */
+.menu-page {
+    padding: 60px 5%;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-header h1 {
+    font-size: 2.8rem;
+}
+
+.cookie-item-detailed {
+    text-align: center;
+}
+
+.cookie-item-detailed img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.cookie-item-detailed h3 {
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+}
+
+.cookie-description {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 15px;
+}
+
+/* About Us Page */
+.about-page {
+    padding: 60px 5%;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    font-size: 2.8rem;
+}
+
+.about-story-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    color: #e83e8c;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.about-values-section {
+    text-align: center;
+}
+
+.about-values-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.value-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.value-item h3 {
+    font-size: 1.5rem;
+    color: #e83e8c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav, .header-actions .btn, .header-actions .icon-link {
+        display: none; /* Hide on mobile */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show on mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .info-content, .about-story-section {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-form input {
+        width: 80%;
+    }
+}
