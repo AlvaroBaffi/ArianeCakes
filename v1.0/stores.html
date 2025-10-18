@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Ariane Cake's - Ariane Cake's</title>
+    <title>Como chegar - Ariane Cake's</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -13,20 +13,52 @@
     <main>
         <section class="store-finder">
             <div class="store-finder-content">
-                <h1>Onde estamos</h1>
-                <p>Busque nossa confeitaria mais próxima de você.</p>
-                <form class="search-form">
-                    <input type="text" placeholder="Cidade, estado ou CEP">
-                    <button type="submit" class="btn btn-primary">Buscar</button>
-                </form>
+                <h1>Como chegar</h1>                
             </div>
-            <div class="map-placeholder">
-                <img src="https://placehold.co/1200x600/EAEAEA/333?text=Map+Placeholder" alt="Map of store locations">
+
+            <div class="map-container" style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;">
+                <aside class="store-card" style="flex:1 1 360px;max-width:420px;background:#fff;padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+                    <header style="display:flex;align-items:center;gap:12px;">
+                        <div style="width:56px;height:56px;border-radius:8px;background:#fdecef;display:flex;align-items:center;justify-content:center;font-size:28px;">🍰</div>
+                        <div>
+                            <h2 style="margin:0 0 4px;font-size:1.25rem;">Ariane Cake's</h2>
+                            <p style="margin:0;color:#666;font-size:0.95rem;">Nossa loja — Como chegar</p>
+                        </div>
+                    </header>
+
+                    <address style="margin:16px 0;color:#333;line-height:1.4;font-style:normal;">
+                        <p style="margin:0;"><strong>📍 Endereço:</strong> R. Surucuá, 37 - Tarumã, Manaus - AM</p>
+                        <p style="margin:8px 0 0;"><strong>☎ Telefone:</strong> (92) 9114-6084</p>
+                    </address>
+
+                    <section aria-labelledby="hours-heading" style="margin-top:12px;">
+                        <h3 id="hours-heading" style="margin:0 0 8px 0;font-size:1rem;">Horário de funcionamento</h3>
+                        <table style="width:100%;border-collapse:collapse;color:#333;font-size:0.95rem;">
+                            <tbody>
+                                <tr><td style="padding:6px 0;border-bottom:1px solid #f0f0f0;">Segunda-feira</td><td style="padding:6px 0;text-align:right;color:#777;">Não abre</td></tr>
+                                <tr><td style="padding:6px 0;border-bottom:1px solid #f0f0f0;">Terça-feira</td><td style="padding:6px 0;text-align:right;color:#777;">Não abre</td></tr>
+                                <tr><td style="padding:6px 0;border-bottom:1px solid #f0f0f0;">Quarta-feira</td><td style="padding:6px 0;text-align:right;color:#777;">17:00 às 21:00</td></tr>
+                                <tr><td style="padding:6px 0;border-bottom:1px solid #f0f0f0;">Quinta-feira</td><td style="padding:6px 0;text-align:right;color:#777;">15:00 às 21:30</td></tr>
+                                <tr><td style="padding:6px 0;border-bottom:1px solid #f0f0f0;">Sexta-feira</td><td style="padding:6px 0;text-align:right;color:#777;">16:00 às 21:30</td></tr>
+                                <tr><td style="padding:6px 0;border-bottom:1px solid #f0f0f0;">Sábado</td><td style="padding:6px 0;text-align:right;color:#777;">16:00 às 23:00</td></tr>
+                                <tr><td style="padding:6px 0;">Domingo</td><td style="padding:6px 0;text-align:right;color:#777;">16:00 às 22:00</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </aside>
+
+                <div id="map" style="flex:2 1 560px;min-width:300px;height:600px;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.06);"></div>
             </div>
+        
+
         </section>
     </main>
 
     <div id="footer"></div>
+
     <script src="script.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAb3PNcWT3NyV3qdULAKt9D0QBU2WAb7c&libraries=places&callback=initMap">
+    </script>
 </body>
 </html>

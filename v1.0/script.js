@@ -43,3 +43,39 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(err => console.error(err));
 });
+
+function initMap() {
+    // Coordenadas da confeitaria (exemplo: Ribeirão Preto)
+    const confeitaria = { lat: -2.9935201256769512, lng: -60.04281681174986};
+
+    // Inicializa o mapa
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: confeitaria,
+        mapTypeControl: false,
+        streetViewControl: false,
+    });
+
+    // Cria o marcador
+    const marker = new google.maps.Marker({
+        position: confeitaria,
+        map,
+        title: "Ariane Cake's",
+    });
+
+    // URL para abrir o Google Maps com a localização
+    const mapsUrl = `https://www.google.com/maps?q=${confeitaria.lat},${confeitaria.lng}`;
+
+    // Redireciona ao clicar no marcador
+    marker.addListener("click", () => {
+        window.open(mapsUrl, "_blank");
+    });
+
+    // Redireciona ao clicar em qualquer parte do mapa
+    map.addListener("click", () => {
+        window.open(mapsUrl, "_blank");
+    });
+}
+
+
+
