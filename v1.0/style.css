@@ -142,6 +142,7 @@ body {
 .btn-outline {
     background-color: #fff;
     color: #e83e8c;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .btn-outline:hover {
@@ -232,7 +233,7 @@ body {
 
 .cookie-item {
     width: 75%;
-    height: 150px;
+    height: 170px;
     display: flex;
     flex-direction: row;
     align-items: center;
