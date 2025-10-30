@@ -8,18 +8,21 @@ body {
 
 /* Header */
 .main-header {
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
-    padding: 10px 5%;
-    position: sticky;
+    width: 100%;
+    background-color: #ffe9f5f3;
+    position: fixed;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 60px;
 }
 
 .logo a {
@@ -29,6 +32,41 @@ body {
     text-decoration: none;
 }
 
+.instagram-link i {
+    font-size: 28px;
+    color: #E4405F; /* cor oficial do Instagram */
+    transition: transform 0.2s;
+}
+
+.instagram-link i:hover {
+    transform: scale(1.2);
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-link i {
+    font-size: 28px;
+    color: #25D366;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-link i:hover {
+    transform: scale(1.2);
+}
+
+.icon-ifood {
+    width: 32px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.icon-ifood:hover {
+    transform: scale(1.2);
+}
 .main-nav ul {
     list-style: none;
     margin: 0;
@@ -71,13 +109,19 @@ body {
 
 /* Buttons */
 .btn {
-    padding: 12px 24px;
+    padding: 10px 20px;
     border: none;
     border-radius: 50px;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
 }
 
 .btn-primary {
@@ -87,13 +131,23 @@ body {
 
 .btn-light {
     background-color: #fff;
-    color: #333;
+    color: #e83e8c;
+}
+
+.btn-light:hover {
+    background-color: #e83e8c;
+    color: #fff;
 }
 
 .btn-outline {
-    background-color: transparent;
-    color: #333;
-    border: 2px solid #333;
+    background-color: #fff;
+    color: #e83e8c;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn-outline:hover {
+    background-color: #e83e8c;
+    color: #fff;
 }
 
 /* Hero Section */
@@ -107,12 +161,23 @@ body {
     width: 100%;
     height: 70vh;
     overflow: hidden;
+    position: relative;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #0000007a 0px 1px 15px;
 }
 
 .hero-background {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.logo-header {
+    height: 45px;
+    width: auto;
 }
 
 .hero-content {
@@ -138,40 +203,94 @@ body {
 
 /* Weekly Cookies Section */
 .weekly-cookies {
-    padding: 60px 5%;
+    width: 80%;
+    padding: 2rem 1.5rem;
     text-align: center;
+    margin: 0 auto 0rem ;
 }
 
 .weekly-cookies h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 4rem;
+    font-weight: 800;
 }
 
 .cookies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr;
+}
+
+.div-position{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.div-position2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .cookie-item {
+    width: 75%;
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     text-align: center;
+    background-color: #d4d4d4;
+    padding: 1.5rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 5rem;
 }
 
 .cookie-item img {
     width: 100%;
-    border-radius: 15px;
-    margin-bottom: 15px;
+    max-width: 300px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
 }
 
-.cookie-item h3 {
-    font-size: 1.4rem;
-    margin: 0;
+.cookie-item:hover {
+    background-color: #e26da4;
+    color: #fff;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease
+}
+
+.content-text {
+    margin-left: 20px;
+    text-align: left;
+    padding: 20px;
+}
+
+.content-text h3 {
+    font-size: 1.5rem;
+}
+
+.content-text h4 {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+    .mais-vendidos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .mais-vendidos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* Info Section */
 .info-section {
     padding: 60px 5%;
-    background-color: #fff;
+    background-color: #fdc0dd;
 }
 
 .info-content {
@@ -185,8 +304,10 @@ body {
 }
 
 .info-image img {
-    width: 100%;
+    width: 350px;
+    height: 350px;
     border-radius: 15px;
+    padding-left: 120px;
 }
 
 .info-text {
@@ -204,7 +325,7 @@ body {
 
 /* Footer */
 .main-footer {
-    background-color: #f0f0f0;
+    background-color: #ffe9f5f3;
     padding: 50px 5%;
     color: #555;
 }
@@ -224,7 +345,7 @@ body {
 
 .footer-column h4 {
     font-size: 1.2rem;
-    color: #333;
+    color: #555;
     margin-bottom: 15px;
 }
 
@@ -246,6 +367,17 @@ body {
     gap: 15px;
 }
 
+.social-icons a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+}
+
+
+.social-icons i:hover {
+    transform: scale(1);
+}
+
 .footer-bottom {
     text-align: center;
     border-top: 1px solid #ddd;
@@ -260,6 +392,33 @@ body {
 
 .store-finder-content h1 {
     font-size: 2.8rem;
+}
+
+.map-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.store-list {
+    text-align: center;
+}
+
+.store-list h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.store-list h3 {
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+}
+.store-list p {
+    text-align: left;
+    font-size: 1rem;
+    margin: 5px 0;
 }
 
 .search-form {
