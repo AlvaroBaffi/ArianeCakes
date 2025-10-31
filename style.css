@@ -6,6 +6,32 @@ body {
     color: #333;
 }
 
+.banner {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    background-image: url('/fundo3.png');
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.136); 
+    top: 70px; 
+}
+
+.banner h1 {
+    color: rgba(255, 255, 255, 0.866);
+    font-size: 5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    font-family: 'Pacifico', cursive;
+    box-shadow: #0000005d;
+}
+
 /* Header */
 .main-header {
     width: 100%;
@@ -150,6 +176,86 @@ body {
     color: #fff;
 }
 
+/* Imagem de fundo fixa */
+.imagem-fundo {
+    position: fixed;
+    background-image: url('source/fundo30.jpg');
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Overlay do Slide */
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Ocupa 100% do container pai */
+    width: 100%;
+    height: 100%;
+    /* Configuração da imagem de fundo */
+    background-size: cover;
+    /* Cobre toda a área sem distorcer */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Não repete a imagem */
+    /* Layout do conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Estilo do texto */
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.slide-overlay img {
+    width: 100%;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {}
+
+.slide {
+    height: 400px;
+}
+
+.slide-content h2 {
+    font-size: 2rem;
+}
+
+.slide-content p {
+    font-size: 1rem;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -212,6 +318,281 @@ body {
 .weekly-cookies h2 {
     font-size: 4rem;
     font-weight: 800;
+}
+
+/* cookies5 - imagem esquerda, texto direita */
+.cookies5 {
+    display: flex; /* Adicione isto! */
+    flex-direction: row;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    height: 350px;
+    margin-bottom: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
+    position: relative;
+    left: -220px;     
+}
+
+.cookies5 .cookie-image {
+    flex: 3;
+    border-radius: 30px;
+    margin: 20px; /* Reduza a margem */
+    height: auto; /* ou um valor positivo como 200px */
+    max-width: 100%;
+    object-fit: cover;
+    transform: scale(0.8);
+    margin-top: -100px
+}
+
+.cookies5 .cookie-text {
+    flex: 3;
+    text-align: left;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cookies5:hover {
+    background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* cookies6 - imagem direita, texto esquerda */
+.cookies6 {
+    display: flex; /* ADICIONE ISTO! */
+    flex-direction: row-reverse;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    height: 350px;
+    margin-bottom: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
+    position: relative;
+    left: 220px;  
+}
+
+.cookies6 .cookie-image {
+    flex: 3;
+    border-radius: 20px;
+    margin: 20px;
+    height: auto; /* CORRIJA: era -150px */
+    max-width: 100%;
+    object-fit: cover;
+    transform: scale(0.8);
+    margin-top: -100px
+}
+
+.cookies6 .cookie-text {
+    flex: 3;
+    text-align: left; 
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cookies6:hover {
+    background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* cookies7 - imagem esquerda, texto direita */
+.cookies7 { /* FALTAVA O PONTO! */
+    display: flex; /* ADICIONE */
+    flex-direction: row;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    height: 350px;
+    margin-bottom: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
+    position: relative;
+    left: -220px; 
+    
+}
+
+.cookies7 .cookie-image {
+    flex: 3;
+    border-radius: 20px;
+    margin: 20px; /* era 65px */
+    height: auto; /* era -150px */
+    max-width: 100%;
+    object-fit: cover;
+    transform: scale(0.8);
+    margin-top: -80px
+}
+
+.cookies7 .cookie-text {
+    flex: 3;
+    text-align: left;
+    padding: 40px; /* era 60px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cookies7:hover {
+    background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* cookies8 - imagem direita, texto esquerda */
+.cookies8 {
+    display: flex; /* ADICIONE */
+    flex-direction: row-reverse;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    height: 350px;
+    margin-bottom: 150px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
+    position: relative;
+    left: 220px; 
+   
+}
+
+.cookies8 .cookie-image {
+    flex: 3;
+    border-radius: 20px;
+    margin: 20px; /* era 65px */
+    height: auto; /* era -150px */
+    max-width: 100%;
+    object-fit: cover;
+    transform: scale(0.8);
+    margin-top: -180px
+}
+
+.cookies8 .cookie-text {
+    flex: 3;
+    text-align: left;
+    padding: 40px; /* era 60px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cookies8:hover {
+    background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* cookies9 - imagem esquerda, texto direita */
+.cookies9 {
+    display: flex; /* ADICIONE */
+    flex-direction: row;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    height: 350px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
+    position: relative;
+    left: -220px; 
+    overflow: hidden;
+}
+
+.cookies9 .cookie-image {
+    flex: 3;
+    border-radius: 20px;
+    margin: 20px; /* era 65px */
+    height: auto; /* era -150px */
+    max-width: 100%;
+    object-fit: cover;
+    transform: scale(0.8);
+    margin-top: -100px
+}
+
+.cookies9 .cookie-text {
+    flex: 3;
+    text-align: left;
+    padding: 40px; /* era 60px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cookies9:hover {
+    background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos das imagens */
+.cookie-image img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Estilos do texto */
+.cookie-text h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.cookie-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Botão com borda transparente */
+.btn-pedido {
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid transparent;
+    /* borda transparente */
+    color: #000000;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    border-width: 3px;
+    width: 150px;
+    font-weight: bold;
+}
+
+/* Quando passar o mouse na box, a borda do botão fica preta */
+.cookies5:hover .btn-pedido {
+    border-color: #000000;
+}
+
+/* Quando passar o mouse na box, a borda do botão fica preta */
+.cookies6:hover .btn-pedido {
+    border-color: #000000;
+}
+
+/* Quando passar o mouse na box, a borda do botão fica preta */
+.cookies7:hover .btn-pedido {
+    border-color: #000000;
+}
+
+/* Quando passar o mouse na box, a borda do botão fica preta */
+.cookies8:hover .btn-pedido {
+    border-color: #000000;
+}
+
+/* Quando passar o mouse na box, a borda do botão fica preta */
+.cookies9:hover .btn-pedido {
+    border-color: #000000;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+
+    .cookie-item,
+    .cookies5,
+    .cookies6,
+    .cookies7,
+    .cookies8 {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .cookie-text {
+        padding: 20px 0 0 0 !important;
+    }
+
+    .weekly-cookies h2 {
+        font-size: 2rem;
+    }
 }
 
 .cookies-grid {
@@ -484,56 +865,67 @@ body {
 
 /* About Us Page */
 .about-page {
-    padding: 60px 5%;
+    padding: 80px 5%;  
+    
 }
 
 .about-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
+    
 }
 
 .about-header h1 {
     font-size: 2.8rem;
+    margin-top: 8rem;
 }
 
 .about-story-section {
+    padding: 2rem;
     display: flex;
     align-items: center;
-    gap: 50px;
-    margin-bottom: 60px;
+    gap: 60px;
 }
 
 .about-image {
-    flex: 1;
-    max-width: 400px;
+    flex: 0 0 350px; 
+    max-width: 350px;
+    /* transform: translateY(-50%); */
 }
 
 .about-image img {
-    width: 100%;
-    border-radius: 50%;
+    width: 97%;
+    height: 450px;
+    border-radius: 15%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.214);
 }
 
 .about-text {
-    flex: 2;
+    flex: 1;
+    /* transform: translateY(-50%); */
 }
 
 .about-text h2 {
     font-size: 2.2rem;
-    color: #e83e8c;
+    color: #FFB9CD;
+    
 }
 
 .about-text p {
     font-size: 1.1rem;
     line-height: 1.7;
+    
 }
 
 .about-values-section {
     text-align: center;
+    padding: 2rem;
 }
 
 .about-values-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 150px;
+    
 }
 
 .values-grid {
@@ -543,15 +935,208 @@ body {
 }
 
 .value-item {
-    background-color: #fff;
-    padding: 30px;
+    background-color: #ffb9cd;
+    height: 250px;
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.289);
+    
 }
 
 .value-item h3 {
     font-size: 1.5rem;
-    color: #e83e8c;
+    color: #000;
+    font-weight: 900;
+}
+
+.value-item p {
+    color: #202020;
+    font-weight: 600;
+}
+
+/* Galeria de fotos */
+.gallery-section {
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    /* Cor de fundo */
+    background: linear-gradient(135deg, #ffffff 0%, #f4c2c2 25%, #ffffff 50%, #f4c2c2 75%, #ffffff 100%);
+    background-position: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.284);
+  
+    border-width: 4px;
+
+    /* Remove margens negativas do body/html que podem estar causando o problema */
+    margin-left: 0;
+    margin-right: 0;
+
+    /* Ocupa 100% da largura da viewport (tela) */
+    width: 100vw;
+
+    /* Compensa se houver padding no body */
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+
+    /* Garante que a section ocupe toda a altura da tela */
+    min-height: 110vh;
+
+    /* Remove qualquer espaçamento extra */
+    box-sizing: border-box;
+}
+
+/* As imagens DENTRO da galeria não serão esticadas */
+.gallery-section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Mantém as proporções das imagens */
+    display: block;
+}
+
+
+/* As imagens DENTRO da galeria não serão esticadas */
+.gallery-section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Mantém as proporções das imagens */
+    display: block;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 200px 250px;
+    gap: 0;
+    width: 100%;
+    height: 750px;
+
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    z-index: 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Layout específico para cada item */
+.item-1 {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+
+}
+
+.item-2 {
+    grid-column: 2;
+    grid-row: 1 / 5;
+    /* Ocupa 2 linhas */
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+.item-3 {
+    grid-column: 3 / 5;
+    /* Ocupa 2 colunas */
+    grid-row: 1;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+.item-4 {
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 20px;
+    margin: 10px;
+    height: 430px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+.item-5 {
+    grid-column: 3;
+    grid-row: 2 / 4;
+    /* Ocupa 2 linhas */
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+.item-6 {
+    grid-column: 4;
+    grid-row: 2 / 4;
+    /* Ocupa 2 linhas */
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.462);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 200px);
+        height: auto;
+    }
+
+    .item-1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .item-2 {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+
+    .item-3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .item-4 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .item-5 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .item-6 {
+        grid-column: 1 / 3;
+        grid-row: 4;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 250px);
+    }
+
+    .gallery-item {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
 }
 
 /* Responsive Design */
@@ -596,3 +1181,4 @@ body {
         width: 80%;
     }
 }
+

@@ -1,47 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - Ariane Cake's</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
+
 <body>
     <div id="header"></div>
 
     <main>
-        <section class="about-page">
+        <section>
             <div class="about-header">
-                <h1>Our Story</h1>
+                <h1>Historia</h1>
             </div>
+        </section>
 
+        <section>
             <div class="about-story-section">
                 <div class="about-image">
-                    <img src="https://placehold.co/500x500/EAD9F2/333?text=Owner" alt="Photo of the owner">
+                    <img src="source/Perfil.jpeg" alt="Photo">
                 </div>
                 <div class="about-text">
-                    <h2>From a Dream to Deliciousness</h2>
-                    <p>It all started with a single dream: to create the world's best chocolate chip cookie. Our founder, Jane Doe, spent years perfecting her recipe, testing thousands of combinations of flour, butter, and sugar. Her passion for baking and obsession with quality led to the creation of the first Crumbl cookie, a treat so good it had to be shared with the world.</p>
-                    <p>From that first cookie, our mission has been to bring friends and family together over a box of the best cookies in the world. We believe that every cookie should be an experience, a moment of pure joy that makes any day a little sweeter.</p>
+                    <h2>Ariane Cakes a Dream a Love</h2>
+                    <p>Desde cedo, a confeitaria já fazia parte da minha vida. Tudo começou na infância, quando
+                        ajudávamos
+                        no restaurante da nossa mãe preparando doces que encantavam os clientes. Pudins cremosos e
+                        cupcakes
+                        fofinhos saíam das nossas mãos ainda pequenas, mas já carregados de carinho e dedicação.
+                    </p>
+                    <p>Com o tempo, a vida nos levou por outros caminhos, mas aquela lembrança doce nunca saiu do meu
+                        coração. Ao me tornar adulta, redescobri na confeitaria não apenas uma paixão e amor, mas também
+                        um
+                        propósito: criar momentos especiais através de sabores que resgatam memórias e despertam
+                        sorrisos.
+                    </p>
+                    <p>Hoje, já são quatro anos de dedicação total à confeitaria. Cada receita é feita com cuidado
+                        artesanal, como nos velhos tempos, mas com um toque moderno que encanta todos que provam. Nossa
+                        missão é simples: adoçar sua vida com muito amor em cada detalhe.</p>
                 </div>
             </div>
+        </section>
 
+        <section>
             <div class="about-values-section">
-                <h2>Our Values</h2>
+                <h2>Valores</h2>
                 <div class="values-grid">
                     <div class="value-item">
-                        <h3>Quality Ingredients</h3>
-                        <p>We use only the finest ingredients, from real butter to premium chocolate, to ensure every cookie is perfect.</p>
+                        <h3>Qualidade</h3>
+                        <p>Nosso compromisso é superar expectativas. Da escolha dos ingredientes à apresentação final,
+                            tudo
+                            é feito com cuidado para garantir sabor, beleza e excelência.</p>
                     </div>
                     <div class="value-item">
-                        <h3>Freshly Baked</h3>
-                        <p>Our cookies are baked fresh every day in our open-kitchen bakeries. You can see and smell the difference.</p>
+                        <h3>Detalhes</h3>
+                        <p>Mais do que doces, entregamos carinho. Cada receita é preparada com amor, pensando em
+                            transformar
+                            momentos simples em lembranças especiais.</p>
                     </div>
                     <div class="value-item">
-                        <h3>Community</h3>
-                        <p>We are more than just a cookie company; we are part of your community, here to celebrate your special moments.</p>
+                        <h3>Conexão</h3>
+                        <p>Acreditamos que a confeitaria tem o poder de reunir famílias, aproximar amigos e trazer
+                            leveza ao
+                            dia a dia. Servimos não apenas sobremesas, mas experiências que aquecem o coração.</p>
                     </div>
                 </div>
             </div>
@@ -49,10 +73,42 @@
     </main>
 
     <div id="footer"></div>
-    <script src="script.js"></script>
-</body>
-</html>   </footer>
 
+    <style>
+        .slide {
+            opacity: 0;
+            transform: translateY(30px) scale(0.90);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0);
+        }
+
+        .slide.active:hover {
+            transform: translateY(-2px) scale(1.02);
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('.value-item, img').forEach(el => {
+            el.classList.add('slide');
+        });
+
+        function showElements() {
+            document.querySelectorAll('.slide').forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('load', showElements);
+        window.addEventListener('scroll', showElements);
+    </script>
     <script src="script.js"></script>
 </body>
+
 </html>
