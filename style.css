@@ -6,7 +6,7 @@ body {
     background-color: #fcfcfc;
     color: #333;
 }
-
+/*testes 222222222222222222*/
 .banner {
     position: relative;
     width: 100%;
@@ -20,14 +20,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.136); 
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.136);  */
     top: 70px; 
 }
 
 .banner h1 {
-    color: rgba(255, 255, 255, 0.866);
-    font-size: 5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: #d6244b;
+    font-size: 8rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     z-index: 2;
     font-family: 'Pacifico', cursive;
     box-shadow: #0000005d;
