@@ -288,8 +288,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: #0000007a 0px 1px 15px;
+    box-shadow: #000000bd;
+    margin-top: 61px; /* Ajuste este valor de acordo com a altura do seu header */
+    
 }
+
+.hero-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ou use 'contain' se quiser ver o vídeo inteiro */
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-position: center; /* centraliza o vídeo */
+
+    /* Melhorias de qualidade */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Remover controles do vídeo */
+.hero-video-wrapper video::-webkit-media-controls {
+    display: none !important;
+}
+
+.hero-video-wrapper video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
 
 .hero-background {
     width: 100%;
@@ -662,7 +688,7 @@ body {
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    margin-bottom: 5rem;
+    margin-bottom: 5rem; 
 }
 
 .cookie-item img {
@@ -673,7 +699,7 @@ body {
 }
 
 .cookie-item:hover {
-    background-color: #e26da4;
+    background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
     color: #fff;
     transform: scale(1.05);
     transition: transform 0.3s ease, background-color 0.3s ease
@@ -708,8 +734,9 @@ body {
 
 /* Info Section */
 .info-section {
-    padding: 60px 5%;
+    padding: 50px 5%;
     background-color: #fdc0dd;
+     position: relative; /* Importante */
 }
 
 .info-content {
@@ -723,10 +750,19 @@ body {
 }
 
 .info-image img {
-    width: 350px;
-    height: 350px;
-    border-radius: 15px;
-    padding-left: 120px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+    padding-left: 200px;
+    display: flex;
+    justify-content: center; /* Centraliza */
+    align-items: center;
+    padding: 40px; /* Espaço ao redor */
+    right: 50px;
+    margin-left: auto;
+    margin-right: 100px;
+    
+    
 }
 
 .info-text {
