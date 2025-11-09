@@ -18,7 +18,7 @@ body {
 .banner {
     position: relative;
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     background-size: cover;
@@ -184,6 +184,13 @@ body {
     color: #fff;
 }
 
+.textura-fundo {
+    background-image: url('source/fundo30.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Imagem de fundo fixa */
 .imagem-fundo {
     position: fixed;
@@ -269,6 +276,7 @@ body {
     position: relative;
     text-align: center;
     color: #fff;
+    margin-top: 3rem;
 }
 
 .hero-video-wrapper {
@@ -396,16 +404,6 @@ body {
     margin-bottom: 30px;
 }
 
-.cookies5 .cookie-text button {
-    padding: 15px 40px;
-    border-radius: 25px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-  
-}
-
 .cookies5:hover {
     background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
@@ -454,15 +452,6 @@ body {
     margin-bottom: 30px;
 }
 
-.cookies6 .cookie-text button {
-    padding: 15px 40px;
-    border-radius: 25px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
 .cookies6:hover {
     background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
@@ -480,7 +469,6 @@ body {
     max-width: 1000px;
     width: 90%;
     margin: 100px -150px;
-     
 }
 
 .cookies7 .cookie-image {
@@ -509,15 +497,6 @@ body {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 30px;
-}
-
-.cookies7 .cookie-text button {
-    padding: 15px 40px;
-    border-radius: 25px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
 }
 
 .cookies7:hover {
@@ -569,15 +548,6 @@ body {
     margin-bottom: 30px;
 }
 
-.cookies8 .cookie-text button {
-    padding: 15px 40px;
-    border-radius: 25px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
 .cookies8:hover {
     background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
@@ -625,14 +595,6 @@ body {
     margin-bottom: 30px;
 }
 
-.cookies9 .cookie-text button {
-    padding: 15px 40px;
-    border-radius: 25px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
 .cookies9:hover {
     background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
@@ -659,44 +621,21 @@ body {
     color: #000000;
 }
 
-/* Botão com borda transparente */
 .btn-pedido {
-    padding: 12px 24px;
-    background: transparent;
-    border: 2px solid transparent;
-    /* borda transparente */
-    color: #000000;
+    padding: 15px 40px;
+    border-radius: 25px;
+    background-color: #555;
+    color: #ffffff;
+    border: none;
     cursor: pointer;
-    border-radius: 40px;
-    transition: all 0.3s ease;
-    border-width: 3px;
-    width: 150px;
-    font-weight: bold;
+    box-shadow: #0000005d 0px 4px 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Quando passar o mouse na box, a borda do botão fica preta */
-.cookies5:hover .btn-pedido {
-    border-color: #000000;
-}
-
-/* Quando passar o mouse na box, a borda do botão fica preta */
-.cookies6:hover .btn-pedido {
-    border-color: #000000;
-}
-
-/* Quando passar o mouse na box, a borda do botão fica preta */
-.cookies7:hover .btn-pedido {
-    border-color: #000000;
-}
-
-/* Quando passar o mouse na box, a borda do botão fica preta */
-.cookies8:hover .btn-pedido {
-    border-color: #000000;
-}
-
-/* Quando passar o mouse na box, a borda do botão fica preta */
-.cookies9:hover .btn-pedido {
-    border-color: #000000;
+.btn-pedido:hover {
+    background-color: #d6244b;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Responsivo */
@@ -1001,13 +940,11 @@ body {
 /* About Us Page */
 .about-page {
     padding: 80px 5%;  
-    
 }
 
 .about-header {
     text-align: center;
     margin-bottom: 70px;
-    
 }
 
 .about-header h1 {
@@ -1025,7 +962,6 @@ body {
 .about-image {
     flex: 0 0 350px; 
     max-width: 350px;
-    /* transform: translateY(-50%); */
 }
 
 .about-image img {
@@ -1037,19 +973,20 @@ body {
 
 .about-text {
     flex: 1;
-    /* transform: translateY(-50%); */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.289);
 }
 
 .about-text h2 {
     font-size: 2.2rem;
-    color: #FFB9CD;
-    
+    color: #e83e8c;
 }
 
 .about-text p {
     font-size: 1.1rem;
     line-height: 1.7;
-    
 }
 
 .about-values-section {
@@ -1060,7 +997,6 @@ body {
 .about-values-section h2 {
     font-size: 2.5rem;
     margin-bottom: 150px;
-    
 }
 
 .values-grid {
