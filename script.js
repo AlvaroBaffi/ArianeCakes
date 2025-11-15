@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initMap() {
     // Coordenadas da confeitaria (exemplo: Ribeirão Preto)
-    const confeitaria = { lat: -2.9935201256769512, lng: -60.04281681174986};
+    const confeitaria = { lat: -2.9935201256769512, lng: -60.04281681174986 };
 
     // Inicializa o mapa
     const map = new google.maps.Map(document.getElementById("map"), {
