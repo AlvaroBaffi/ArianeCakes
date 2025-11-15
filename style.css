@@ -368,11 +368,12 @@ body {
     align-items: center;
     background-color: #f1f1f1;
     border-radius: 30px;
-    min-height: 300px;
+    min-height: 230px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
     max-width: 1000px;
     width: 50%;
     margin: 100px -150px;
+    
 }
 
 .cookies5 .cookie-image {
@@ -383,7 +384,7 @@ body {
 
 .cookies5 .cookie-image img {
     width: 125%;
-    max-width: 400px;
+    max-width: 350px;
     transform: scale(1.1);
     transform: rotate(30deg);  
 }
@@ -416,7 +417,7 @@ body {
     align-items: center;
     background-color: #f1f1f1;
     border-radius: 30px;
-    min-height: 300px;
+    min-height: 230px;
     margin-left: auto;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
     max-width: 1000px;
@@ -464,11 +465,18 @@ body {
     align-items: center;
     background-color: #f1f1f1;
     border-radius: 30px;
-    min-height: 300px;
+    min-height: 230px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
     max-width: 1000px;
     width: 90%;
     margin: 100px -150px;
+<<<<<<< HEAD
+    align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center;
+    
+     
+=======
+>>>>>>> 9fc61101085a791e7143f98247bf9a7f2487ef15
 }
 
 .cookies7 .cookie-image {
@@ -511,12 +519,12 @@ body {
     align-items: center;
     background-color: #f1f1f1;
     border-radius: 30px;
-    min-height: 300px;
+    min-height: 230px;
     margin-left: auto;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
     max-width: 1000px;
     width: 90%;
-    margin: 100px 430px;
+    margin: 100px 370px;
     
 }
 
@@ -559,12 +567,11 @@ body {
     align-items: center;
     background-color: #f1f1f1;
     border-radius: 30px;
-    min-height: 300px;
+    min-height: 230px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
     max-width: 1000px;
-    width: 90%;
-    overflow: hidden;
-    margin: 100px -148px;
+    width: 50%;
+    margin: 100px -150px;
 }
 
 .cookies9 .cookie-image {
@@ -596,6 +603,64 @@ body {
 }
 
 .cookies9:hover {
+    background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cookies10 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    min-height: 230px;
+    margin-left: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
+    max-width: 1000px;
+    width: 90%;
+    margin: 100px 400px;
+}
+
+.cookies10 .cookie-image {
+    flex: 1;
+    padding: 40px;
+    
+}
+
+.cookies10 .cookie-image img {
+    width: 125%;
+    max-width: 300px;
+    transform: scale(1.1);
+    transform: rotate(-30deg);  
+}
+
+.cookies10 .cookie-text {
+    flex: 1.5;
+    padding: 20px 80px 60px 40px;
+}
+
+.cookies10 .cookie-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cookies10 .cookie-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.cookies10 .cookie-text button {
+    padding: 15px 40px;
+    border-radius: 25px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  
+}
+
+.cookies10:hover {
     background: linear-gradient(135deg, #ff9aad 0%, #fbbdc3 25%, #ffd1dc 50%, #f4c2c2 75%, #ffa2b0 100%);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
