@@ -45,13 +45,3 @@
         </ul>
     </nav>
 </header>
-
-<script>
-    const btn = document.getElementById("navToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    btn.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("open");
-        btn.setAttribute("aria-expanded", isOpen);
-    });
-</script>
