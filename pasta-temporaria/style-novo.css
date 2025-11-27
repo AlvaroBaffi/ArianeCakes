@@ -21,8 +21,9 @@ body {
 }
 
 .about-header h1 {
-    font-size: 2.8rem;
+    font-size: 6rem;
     margin-top: 8rem;
+    color: #9c0c3c;
 }
 
 .textura-fundo {
@@ -37,15 +38,12 @@ body {
     display: flex;
     align-items: center;
     gap: 60px;
-}
-
-.about-story-section {
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .about-image {
     flex: 0 0 350px;
-    max-width: 350px;
+    max-width: auto;
 }
 
 .about-image img {
@@ -61,11 +59,13 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.289);
+    max-height: 450px;
+    overflow-y: auto;
 }
 
 .about-text h2 {
     font-size: 2.2rem;
-    color: #e83e8c;
+    color: #9c0c3c;
 }
 
 .about-text p {
@@ -79,8 +79,9 @@ body {
 }
 
 .about-values-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 150px;
+    font-size: 4rem;
+    margin-bottom: 100px;
+    color: #9c0c3c;
 }
 
 .values-grid {
@@ -109,9 +110,7 @@ body {
 }
 
 /* _____(MIDIA QUERIES)_____ */
-@media (max-width: 1024px) {
-
-}
+@media (max-width: 1024px) {}
 
 /*===================================================================================*/
 /* FOOTER */
@@ -153,7 +152,9 @@ body {
     color: #555;
 }
 
-.footer-social {}
+.footer-soical {
+    flex-basis: 180px;
+}
 
 .social-icons {
     display: flex;
@@ -166,8 +167,8 @@ body {
     transition: transform 0.2s;
 }
 
-.social-icons i:hover {
-    transform: scale(1);
+.social-icons a img:hover {
+    transform: scale(1.2);
 }
 
 .footer-bottom {
@@ -179,7 +180,6 @@ body {
 .instagram-link i {
     font-size: 28px;
     color: #E4405F;
-    /* cor oficial do Instagram */
     transition: transform 0.2s;
 }
 
@@ -237,7 +237,7 @@ body {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-inline: 30px;
     height: 60px;
 }
 
@@ -393,6 +393,8 @@ body {
 .weekly-cookies h2 {
     font-size: 4rem;
     font-weight: 800;
+    color: #9c0c3c;
+    margin-bottom: 150px;
 }
 
 .cookies-grid {
@@ -406,7 +408,7 @@ body {
     align-items: center;
 }
 
-.div-position2{
+.div-position2 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -414,9 +416,10 @@ body {
 
 .cookie-item {
     width: 75%;
-    height: 170px;
+    max-height: 260px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     background-color: #d4d4d4;
@@ -428,10 +431,12 @@ body {
 }
 
 .cookie-item img {
-    width: 100%;
-    max-width: 300px;
+    width: 200px;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
+    transform: rotate(30deg);
+
+    margin-left: 50px;
 }
 
 .cookie-item:hover {
@@ -441,17 +446,33 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease
 }
 
-.content-text {
-    margin-left: 20px;
+.content-text-left {
+    margin-left: -20px;
     text-align: left;
-    padding: 20px;
+    padding: 40px;
 }
 
-.content-text h3 {
+.content-text-right {
+    margin-right: -20px;
+    text-align: left;
+    padding: 40px;
+}
+
+.content-text-left h3 {
     font-size: 1.5rem;
 }
 
-.content-text h4 {
+.content-text-left h4 {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.content-text-right h3 {
+    font-size: 1.5rem;
+}
+
+.content-text-right h4 {
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 500;
@@ -460,7 +481,7 @@ body {
 .info-section {
     padding: 50px 5%;
     background-color: #fdc0dd;
-     position: relative;
+    position: relative;
 }
 
 .info-content {
@@ -503,7 +524,7 @@ body {
 .btn-outline {
     background-color: #fff;
     color: #e83e8c;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .btn-outline:hover {
@@ -513,6 +534,38 @@ body {
 
 /* _____(MIDIA QUERIES)_____ */
 @media (max-width: 1024px) {
+    .hero {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        margin-top: 3rem;
+    }
+
+    .hero-video-wrapper {
+        width: 100%;
+        height: 70vh;
+        overflow: hidden;
+        position: relative;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: #000000bd;
+        margin-top: 61px;
+    }
+
+    .hero-video-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-position: center;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -526,15 +579,39 @@ body {
     }
 
     .weekly-cookies h2 {
-        font-size: 2rem;
+        font-size: 4rem;
     }
 
     .cookie-item {
-        flex-direction: column !important;
-        text-align: center;
+        width: 100%;
+        flex-direction: row;
+        height: auto;
+        overflow: visible;
     }
 
-    .info-content, .about-story-section {
+    .cookie-item img {
+        width: 130px;
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+
+    .cookie-item h4 {
+        font-size: 0.9rem;
+
+    }
+
+    /* .content-text-right {
+        margin-right: -100px;
+        padding: 20px;
+    }
+
+    .content-text-left {
+        margin-left: -100px;
+        padding: 20px;
+    }  */
+
+    .info-content,
+    .about-story-section {
         flex-direction: column;
     }
 }
@@ -553,7 +630,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 70px; 
+    top: 70px;
 }
 
 .banner h1 {
@@ -578,14 +655,14 @@ body {
     z-index: -1;
 }
 
-.weekly-cookies {
+.weekly-cookies-menu {
     width: 80%;
     padding: 2rem 1.5rem;
     text-align: center;
-    margin: 0 auto 0rem ;
+    margin: 0 auto 0rem;
 }
 
-.weekly-cookies h2 {
+.weekly-cookies-menu h2 {
     font-size: 4rem;
     font-weight: 800;
 }
@@ -605,9 +682,9 @@ body {
     background-color: #d4d4d4;
     padding: 1.5rem 0;
     border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    margin-bottom: 5rem; 
+    margin-bottom: 5rem;
 }
 
 .cookie-item-menu img {
@@ -633,19 +710,19 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
     max-width: 1000px;
     width: 50%;
-    margin: 100px -150px;    
+    margin: 100px -150px;
 }
 
 .cookies5 .cookie-image {
     flex: 1;
-    padding: 40px;    
+    padding: 40px;
 }
 
 .cookies5 .cookie-image img {
     width: 125%;
     max-width: 350px;
     transform: scale(1.1);
-    transform: rotate(30deg);  
+    transform: rotate(30deg);
 }
 
 .cookies5 .cookie-text {
@@ -692,7 +769,7 @@ body {
     width: 125%;
     max-width: 300px;
     transform: scale(1.1);
-    transform: rotate(-30deg);  
+    transform: rotate(-30deg);
 }
 
 .cookies6 .cookie-text {
@@ -737,7 +814,7 @@ body {
     width: 125%;
     max-width: 350px;
     transform: scale(1.1);
-    transform: rotate(30deg);  
+    transform: rotate(30deg);
 }
 
 .cookies7 .cookie-text {
@@ -784,7 +861,7 @@ body {
     width: 125%;
     max-width: 300px;
     transform: scale(1.1);
-    transform: rotate(-25deg);  
+    transform: rotate(-25deg);
 }
 
 .cookies8 .cookie-text {
@@ -829,7 +906,7 @@ body {
     width: 125%;
     max-width: 300px;
     transform: scale(1.1);
-    transform: rotate(30deg);  
+    transform: rotate(30deg);
 }
 
 .cookies9 .cookie-text {
@@ -870,14 +947,14 @@ body {
 .cookies10 .cookie-image {
     flex: 1;
     padding: 40px;
-    
+
 }
 
 .cookies10 .cookie-image img {
     width: 125%;
     max-width: 300px;
     transform: scale(1.1);
-    transform: rotate(-30deg);  
+    transform: rotate(-30deg);
 }
 
 .cookies10 .cookie-text {
@@ -903,7 +980,7 @@ body {
     color: white;
     border: none;
     cursor: pointer;
-  
+
 }
 
 .cookies10:hover {
@@ -1060,7 +1137,7 @@ body {
 
 /* _____(MIDIA QUERIES)_____ */
 @media (max-width: 1024px) {
-    .weekly-cookies h2 {
+    .weekly-cookies-menu h2 {
         font-size: 2rem;
     }
 
@@ -1130,22 +1207,95 @@ body {
 
 .store-finder-content h1 {
     font-size: 2.8rem;
+    color: #9c0c3c;
 }
+
 .map-container {
     margin-top: 40px;
-    display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
-    gap: 30px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .store-card {
+    flex: 1 1 360px;
+    max-width: 420px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    align-items: center;
 
+}
+
+.header-store {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cake-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    background: #fdecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.store-info {
+    text-align: left;
+    margin-left: 12px;
+}
+
+.store-info h2 {
+    margin: 0 0 4px;
+    font-size: 1.25rem;
+}
+
+.store-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.store-address {
+    margin: 16px 0;
+    color: #333;
+    line-height: 1.4;
+    font-style: normal;
+}
+
+.hours-heading {
+    margin-top: 12px;
+}
+
+.hours-heading h3 {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+}
+
+.hours-heading table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.map {
+    flex: 2 1 560px;
+    min-width: 300px;
+    height: 600px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 /* _____(MIDIA QUERIES)_____ */
-@media (max-width: 1024px) {
-
-}
+@media (max-width: 1024px) {}
 
 /* =========================== (ANIMATIONS) =========================== */
 @keyframes fadeIn {
