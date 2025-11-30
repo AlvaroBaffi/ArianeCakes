@@ -14,13 +14,13 @@
 
     <main>
         <section>
-            <div class="about-header">
+            <div class="about-header container">
                 <h1>Historia</h1>
             </div>
             <div class="textura-fundo"></div>
         </section>
 
-        <section>
+        <section class="container">
             <div class="about-story-section">
                 <div class="about-image">
                     <img src="source/Perfil.jpeg" alt="Photo">
@@ -37,7 +37,7 @@
         </section>
 
         <section>
-            <div class="about-values-section">
+            <div class="about-values-section container">
                 <h2>Valores</h2>
                 <div class="values-grid">
                     <div class="value-item">
@@ -64,41 +64,6 @@
     </main>
 
     <div id="footer"></div>
-
-    <style>
-        .slide {
-            opacity: 0;
-            transform: translateY(30px) scale(0.90);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .slide.active {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            filter: blur(0);
-        }
-
-        .slide.active:hover {
-            transform: translateY(-2px) scale(1.02);
-        }
-    </style>
-
-    <script>
-        document.querySelectorAll('.value-item, img').forEach(el => {
-            el.classList.add('slide');
-        });
-
-        function showElements() {
-            document.querySelectorAll('.slide').forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
-                    el.classList.add('active');
-                }
-            });
-        }
-
-        window.addEventListener('load', showElements);
-        window.addEventListener('scroll', showElements);
-    </script>
     <script src="script.js"></script>
 </body>
 
